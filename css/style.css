@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+.container  {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.7);
+    background-image: url(../img/Background.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+   
+.navbar {
+    width: 300px;
+    height: 100%;
+    background-color: beige;
+   position: fixed;
+   top: 0;
+   left: -300px;
+  display: flex;justify-content: center;
+  align-items: center;
+   transition: right 0.8s;
+}
+
+.change {
+    left: 0;
+}
+
+
+.Hamburger-menu {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 50px;
+    cursor: pointer;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.change .line1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+.change .line3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+
+.navitem {
+    text-align: left;
+    list-style: none;
+    margin: 60px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: none;
+   text-transform: uppercase;
+}
+.navlinks::before,
+.navlinks::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform  0.5s;
+}
+
+.navlinks::after {
+bottom: 0;
+transform-origin: right;
+}
+
+.navlinks::before {
+    top: 0;
+    transform-origin: left;
+
+}
+
+.navlinks:hover::before,
+.navlinks:hover::before {
+transform: scaleX(1);
+}
+
